@@ -1,0 +1,70 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+.bookfooter {
+	margin:20px;
+	padding:10px;
+	color:#808080;
+	border-style:none;
+}
+.booktable {
+	margin:20px;
+	padding:10px;
+	width:750px;
+	text-align:center;
+	border: 1px solid #333;
+}
+td {
+	padding:6px;
+	border: 1px solid #bbb;
+}
+th {
+	padding:6px;
+	background-color: #eee;
+	text-align: center;
+	border: 1px solid #bbb;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader"> <img src="__PUBLIC__/images/1.jpg" alt="黑山教材" /> </div>
+  <div class="bookfooter"><div>{$error}</div>
+  <div>请确认下表信息，如果有误可返回更改</div>
+	<table class="booktable">
+		<thead>
+			<tr><th>教材编号</th><th>教材名称</th><th>教材数量</th><th>单价</th></tr>
+		</thead>
+		<tbody>
+<php>
+foreach($_SESSION['book'] as $product_id => $quantity)
+{
+echo '<tr><td>'.$product_id.'</td><td>'.$quantity['bookname'].'</a></td><td>'.$quantity['bookamount'].'</td><td>'.$quantity['bookprice'].'</td></tr>';
+}
+</php>
+		<tr><td colspan="1">教材总计：<php>echo $_SESSION['totalamount']."本";</php></td><td colspan="1">运费总计：0元</td><td colspan="2">价格总计：<php>echo $_SESSION['totalprice']."元";</php></td></tr>
+		</tbody>
+	</table>
+
+	<table class="booktable">
+		<thead>
+			<tr><th colspan="2">收货信息</th></tr>
+		</thead>
+		<tbody>
+		<tr><td colspan="2">会员编号：{@userid}</td></tr>
+		<tr><td>姓名：{^name}</td><td>电话：{^phone}</td></tr>	
+		<tr><td>地址：{^address}</td><td>E-mail：{^email}</td></tr>
+		</tbody>
+	</table>
+<center><a href="javascript:window.history.back();">返回修改</a> <a href="__APP__/cart/redirect"><img src="__PUBLIC__/img/alipay/alipay_bwrx.gif" /></a></center>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

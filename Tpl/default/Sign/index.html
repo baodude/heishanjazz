@@ -1,0 +1,51 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-top:32px;
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:32px;
+	color:#808080;
+}
+td {
+	padding:6px;
+	border: 1px solid #bbb;
+}
+th {
+	padding:6px;
+	background-color: #eee;
+	text-align: center;
+	border: 1px solid #bbb;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader">
+	<table class="booktable">
+		<thead>
+			<tr><th>加入会员</th><th>登录信息</th></tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td width=40%">
+			<ul>
+				<li>购买入会教材便成为黑山爵士音乐网交流会员</li>
+				<li>收到入会教材同时也会收到印有会员编号和密码的单据</li>
+			</ul>
+			</td>
+			<td>
+				<form action="__APP__/index.php/sign/in/{$redirect}" method="post">{$hi}<br />
+				会员编号请前缀字母"C"<br />
+				默认密码为您的联系电话或您姓名拼音，第一次登录后请修改<br />
+				<label for="name">编号：</label><input type="text" name="userid" id="userid" value="{$userid}" /><br />
+				<label for="phone">密码：</label><input type="password" name="pass" id="pass" value="{$password}" /><br />
+				<input value="登录" type="submit" />
+				</form>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

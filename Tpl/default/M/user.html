@@ -1,0 +1,33 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+table {
+	align:center;
+	margin:0 auto;
+	width:800px;
+	text-align:center;
+	border: 1px solid #333;
+}
+th {
+	padding:6px;
+	background-color: #eee;
+	text-align: center;
+	border: 1px solid #bbb;
+}
+td {
+	padding:6px;
+	border: 1px solid #aaa
+}
+</style>
+<div id="details"><br />
+  <table>
+	<thead>
+		<tr><th>编号</th><th>姓名</th><th>电话</th><th>地址</th><th>密码</th><th>注释</th></tr>
+	<tbody>
+	<iterate name="data" id="vo">
+		<tr><td>{$vo.userid}</td><td>{$vo.username}</td><td>{$vo.phone}</td><td>{$vo.address}</td><td>{$vo.password}</td><td>{$vo.note}</td></tr>
+	</iterate>
+	</tbody>
+  </table>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

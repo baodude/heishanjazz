@@ -1,0 +1,60 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+</style>
+<div id="details"><br />
+<div align="center">{$hi}</div>
+  <div id="box-1">        
+    <h1 class="heading">收藏的视频</h1>        
+    <ul>          
+	<iterate name="stardata" id="vo">
+	<li>
+		<span class="date"><a href="__APP__/video/{$vo.videoid}" target="_blank">NO.{$vo.videoid} {$vo.title}</a><a href="__APP__/video/unstar/{$vo.videoid}"><font color="red">X</font></a></span>
+	</li>
+	</iterate>
+    </ul>
+  </div>      
+      <div id="box-2">
+        <h1 class="heading">您的信息</h1>
+        <p id="welcome-text">
+			您的编号：{$userdata.userid}<br />
+			您的姓名：{$userdata.username}<br />
+			现在可购：<php>
+			switch($userdata['prisign']){
+			case 0:
+				echo('入会教材');
+				break;
+			case 1:
+				echo('一期教材');
+				break;
+			case 2:
+				echo('一期教材和二期教材');
+				break;
+			case 3:
+				echo('全部教材');
+				break;
+			}
+			</php><br />
+			您的电话：{$userdata.phone}<br />
+			电子邮箱：{$userdata.email}<br />
+			收货地址：{$userdata.address}<br />
+			<a href="__APP__/member/newpassword" target="_blank">修改密码</a> <br />
+		  </p>
+		  <p>请对照以上信息，如果信息有误以及不完全，请<a href="__APP__/member/modify" target="_blank">修改为正确信息</a>。</p>
+         </div>
+      <div id="box-3">
+        <h1 class="heading">购买的教材</h1>
+      </div>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

@@ -1,0 +1,27 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader">
+	<iterate name="data" id="vo">
+
+	<div>
+
+	<h3><a href="__APP__/index.php/video/{$vo.videoid}" target="_blank">NO.{$vo.videoid} {$vo.title}</a></h3>
+	</div>
+
+	</iterate>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

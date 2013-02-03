@@ -1,0 +1,24 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader">
+  <volist name="data" id="vo" mod="10" >
+  <a href="__APP__/video/tag/{$vo.tag}" target="_blank">{$vo.tag}<sup>{$vo.num}</sup></a>　　
+  <eq name="mod" value="9"><br /></eq>
+  </volist>
+
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

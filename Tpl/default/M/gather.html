@@ -1,0 +1,47 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+table {
+	align:center;
+	margin:0 auto;
+	width:800px;
+	text-align:center;
+	border: 1px solid #333;
+}
+td {
+	padding:6px;
+	border: 1px solid #aaa
+}
+</style>
+<div id="details"><br />
+  	<table>
+		<thead>
+			<td>操作id</td><td>时间</td><td>用户名</td><td>操作</td><td>参数</td>
+		</thead>
+		<tbody>
+		<volist name="data" id="vo">
+			<tr><td>{$vo.operationid}</td><td>{$vo.time}</td><td>{$vo.userid}</td><td>
+			<php>
+			switch($vo['operation'])
+			{
+				case 'signin':
+					echo '成功登录';
+					break;  
+				case 'wrongpassword':
+					echo '密码错误';
+					break;
+				case 'newpassword':
+					echo '修改密码';
+					break;
+				case 'newcontactinfo':
+					echo '修改信息';
+					break;
+				default:
+					echo '未知操作';
+			}
+			</php></td><td>{$vo.parameter}</td></tr>
+		</volist>
+		</tbody>
+	</table>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

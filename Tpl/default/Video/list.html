@@ -1,0 +1,27 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+table {
+	align:center;
+	margin:0 auto;
+	width:750px;
+	text-align:center;
+	border: 1px solid #333;
+}
+td {
+	padding:6px;
+	border: 1px solid #aaa
+}
+</style>
+<div id="details"><br />
+	<table>后缀<sup>~</sup>标记的视频带有视频简述
+		<tbody>
+		<volist name="data" id="vo" mod="3">
+		<eq name="mod" value="1"><tr><td><a href="__APP__/index.php/video/{$vo.videoid}" target="_blank">NO.{$vo.videoid} {$vo.title}</a><php>if($vo['length']!=1) echo '<sup>~</sup>';</php></td></eq>
+		<eq name="mod" value="2"><td><a href="__APP__/index.php/video/{$vo.videoid}" target="_blank">NO.{$vo.videoid} {$vo.title}</a><php>if($vo['length']!=1) echo '<sup>~</sup>';</php></td></eq>
+		<eq name="mod" value="0"><td><a href="__APP__/index.php/video/{$vo.videoid}" target="_blank">NO.{$vo.videoid} {$vo.title}</a><php>if($vo['length']!=1) echo '<sup>~</sup>';</php></td></tr></eq>
+		</volist>
+		</tbody>
+	</table>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

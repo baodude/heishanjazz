@@ -1,0 +1,84 @@
+<include file="./Tpl/default/Public/header.html" />	
+<div id="products">      
+  <div class="small-box">        
+    <h3 class="title">谈音说乐</h3>        
+    <img alt="" src="__PUBLIC__/images/pack.gif" /><br />        
+    <div class="product-details">          
+      <p>学习音乐的一些误区和经验、音乐课本没有的知识<br />黑山老师就各种问题在视频中讲解说明<br />请听黑山老师娓娓道来..
+      </p>          
+      <span class="readmore">
+        <a href="./video">进入...</a>
+      </span> 
+    </div>      
+  </div>      
+  <div class="line">
+  </div>      
+  <div class="small-box">        
+    <h3 class="title">黑山教材</h3>        
+    <img alt="" src="__PUBLIC__/images/pack.gif" /><br />        
+    <div class="product-details">          
+      <p>很想学习流行、爵士音乐而缺少教材？<br />节奏、和声、旋律、作曲、编曲、钢琴、即兴…<br />黑山老师100多本教材等你来学..
+      </p>          
+      <span class="readmore">
+        <a href="/Public/book.html" target="_blank">进入...</a>
+      </span> 
+    </div>      
+  </div>      
+  <div class="line">
+  </div>      
+  <div class="small-box">        
+    <h3 class="title">认识黑山</h3>        
+    <img alt="" src="__PUBLIC__/images/pack.gif" /><br />        
+    <div class="product-details">          
+      <p>翟黑山的资料介绍<br />各种媒体的相关报道<br />各种学习资料
+      </p>          
+      <span class="readmore">
+        <a href="#">进入...</a>
+      </span> 
+    </div>      
+  </div>    
+</div>    
+<div id="details">      
+  <div id="box-1">        
+    <h1 class="heading">您怎么学习</h1>        
+    <ul>          
+      <li> 
+      <span class="date">黑山老师网上讲解
+      </span>            
+      <p>黑山老师已经录制了近200集讲解视频，这些视频根据讲解内容被分门别类的放置在“谈音说乐”栏目内，这些视频在多个视频网站内有存档，如果播放缓慢可以切换至其他线路，欢迎您收看。
+      </p>          
+      </li>          
+      <li> 
+      <span class="date">获得黑山老师的教材
+      </span>            
+      <p>黑山老师一生编纂了130余本教材，这些教材是老师一生的心血，它们涵盖了各个知识面，由于书没有出版，所有提供A4复印版，本站不是商业站点，只收取您成本费。
+      </p>          
+      </li>          
+      <li> 
+      <span class="date">参加举办的实体讲座
+      </span>            
+      <p>在北京举办音乐讲座，欢迎来参加。
+      </p>          
+      </li>        
+    </ul>
+  </div>      
+      <div id="box-2">
+        <h1 class="heading">黑山教学简介</h1>
+        <p id="welcome-text">翟黑山老师1932年生于辽宁黑山县，是第一位留美专攻爵士音乐的华人，一生孜孜不倦，编纂130余本教材，曾任教美中台10余所院校，曾获13届金曲奖特别贡献奖。</p><a href="#">更多关于黑山老师...</a><br />
+          <p id="welcome-text">黑山老师的130多本教材，涵盖节奏、和声、旋律、编曲等各个方面，这些教材按照难易程度分类，推荐您从基础的《爵士四书》开始了解，请进入“黑山教材”频道了解更多信息。<br />黑山老师已录制近200集关于爵士、流行音乐的视频，这些视频涵盖音乐理论、音乐形势、音乐理念等，非常适合与教材配合学习，<a href="__APP__/video">点此进入“谈音说乐”频道</a>。</p>
+         </div>
+      <div id="box-3">
+        <h1 class="heading">新闻</h1>
+	<iterate name="data" id="vo" mod="3">
+		<eq name="mod" value="1"><div class="service1"></eq>
+		<eq name="mod" value="2"><div class="service3"></eq>
+		<eq name="mod" value="0"><div class="service3"></eq>
+			<h4 class="service-head"><php>echo substr($vo["newsid"],0,4).'年'.substr($vo["newsid"],4,2).'月'.substr($vo["newsid"],6,2).'日';</php></h4>
+			<p class="service-text">{$vo.news}</p>
+			</div>
+	</iterate>
+      </div>
+  <div class="clearboth">
+  </div>    
+</div>
+<include file="./Tpl/default/Public/footer.html" />

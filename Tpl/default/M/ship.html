@@ -1,0 +1,27 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader">
+	<iterate name="data" id="vo">
+
+	<div>
+
+	<h3>编号：{$vo.userid} 姓名：{$vo.name} 购书权限：{$vo.prisign}注册时间：{$vo.time} 最后访问ip：{$vo.lastip} 最后访问时间：{$vo.update_time} 初始密码：{$vo.origpass} 当前密码：{$vo.pass} 注释：{$vo.note} </h3>
+	</div>
+
+	</iterate>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

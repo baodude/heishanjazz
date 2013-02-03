@@ -1,0 +1,87 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+.bookfooter {
+	margin:20px;
+	padding:10px;
+	color:#808080;
+	border-style:none;
+}
+.booktable {
+	margin:20px;
+	padding:10px;
+	width:750px;
+	text-align:center;
+	border: 1px solid #333;
+}
+td {
+	padding:6px;
+	border: 1px solid #bbb;
+}
+th {
+	padding:6px;
+	background-color: #eee;
+	text-align: center;
+	border: 1px solid #bbb;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader"> <img src="__PUBLIC__/images/1.jpg" alt="黑山教材" /> </div>
+  <div class="bookfooter"><div>{$error}</div>
+  <div>下表是您的购物信息，请您填写收货信息后提交订单</div>
+	<table class="booktable">
+		<thead>
+			<tr><th>教材编号</th><th>教材名称</th><th>教材数量</th><th>单价</th><th>价格小计</th><th>移除</th></tr>
+		</thead>
+		<tbody>
+<php>
+foreach($_SESSION['book'] as $product_id => $quantity)
+{
+echo '<tr><td>'.$product_id.'</td><td><a href="../
+book/'.$product_id.'" target="_blank">'.$quantity['bookname'].'</a></td><td>'.$quantity['bookamount'].'</td><td>'.$quantity['bookprice'].'</td><td>'.$quantity['bookamount']*$quantity['bookprice'].'</td><td><a href="cart/del/id/'.$product_id.'">移除</a></td></tr>';
+}
+</php>
+		<tr><td colspan="2">教材总计：<php>echo $_SESSION['totalamount']."本";</php></td><td colspan="2">运费总计：0元</td><td colspan="2">价格总计：<php>echo $_SESSION['totalprice']."元";</php></td></tr>
+		</tbody>
+	</table>
+
+	<table class="booktable">
+		<thead>
+			<tr><th>收货说明</th><th>收货信息</th></tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td width="50%">
+			<ul>
+				<li>运费统一收取每本20元，顺丰快递能到的发顺丰，其次是申通，非常偏远的地区发ems。</li>
+				<li>您可以使用支付宝和银行转账两种方式付款。</li>
+			</ul>
+			</td>
+			<td>
+				<form action="cart/confirm" method="post">
+					您的会员编号：{$Think.session.userid}<br />
+					<label for="name">姓名：</label><input type="text" name="name" value="{$billdata.name}" /><br />
+					<label for="phone">电话：</label><input type="text" name="phone" value="{$billdata.phone}" /><br />
+					<label for="address">地址：</label><input type="text" name="address" value="{$billdata.address}" /><br />
+					<label for="email">E-mail：</label><input type="text" name="email" value="{$billdata.email}" /><br />
+					<input value="提交" type="submit" />
+				</form>
+			</td>
+		</tr>
+
+		</tbody>
+	</table>
+
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

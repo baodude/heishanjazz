@@ -1,0 +1,99 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+#links li a {
+	margin-top:32px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:18px;
+	padding:15px;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+	display:block;
+	width:680px;
+	text-decoration: none;
+}
+#links li a:hover {
+	width:676px;
+	background: #f0f0f0;
+	text-decoration: none;
+	border-right:5px solid #aaa;
+}
+.content{
+	color:#80817e;
+	font-size:14px;
+	text-indent:32px;
+	padding:15px;
+}
+table {
+	margin-top:32px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	width:750px;
+	text-align:center;
+	border: 1px solid #333;
+}
+th {
+	padding:6px;
+	background-color: #eee;
+	text-align: center;
+	border: 1px solid #bbb;
+}
+td {
+	border: 1px solid #bbb;
+}
+td a {
+	color:#80817e;
+	display:block;
+	text-decoration: none;
+}
+td a:hover {
+	background: #f0f0f0;
+	text-decoration: none;
+}
+#searchform {
+	margin-top:32px;
+	margin-left:auto;
+	margin-right:auto;
+	width:680px;
+	border: 1px solid #808080;
+	display:block;
+	padding:15px;
+}
+</style>
+    <div id="details"><br />
+		<div id="searchform">
+			<strong>最新视频</strong><br />
+			<volist name="data" id="vo">
+			{$vo.videoid}.{$vo.title}
+			<object width="560" height="420"><param name="movie" value="{$vo.urltudou}"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param><embed src="{$vo.urltudou}" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="560" height="420"></embed></object>
+			</volist>
+		</div>
+		<ul id="links">
+			<li>
+			<a href="__APP__/index.php/video/lists" target="_blank"><strong>视频列表</strong><div class="content">所有视频的列表</div></a>
+			</li>
+		</ul>
+		<div id="searchform">
+			<form method="post" action="__APP__/index.php/video/search">
+				<label for="word">关键字：</label><input type="text" id="word" name="word" />
+				<input type="submit" value="搜索" />
+			</form>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">已有视频专辑</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%"><a href="__APP__/index.php/video/album/1" target="_blank"><br /><strong>“黑山爵士四书系列讲座”</strong><div class="content">不管您有没有音乐理论基础，都可以来看看，需要您课下多练习</div></a></td>
+					<td width="50%"><a href="__APP__/index.php/video/album/2" target="_blank"><br /><strong>“挑战音乐系列讲座”</strong><div class="content">黑山老师挑战音乐示范，共12集，展现黑山老师音乐功力</div></a></td>
+				</tr>
+			</tbody>
+		</table>
+      <div class="clearboth"></div>
+    </div>
+<include file="./Tpl/default/Public/footer.html" />

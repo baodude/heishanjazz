@@ -1,0 +1,31 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+.bookfooter {
+	margin:20px;
+	padding:10px;
+	color:#808080;
+	border-style:none;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader"> <img src="__PUBLIC__/images/1.jpg" alt="黑山教材" /> </div>
+  <div class="bookfooter">
+	<p>教材编号：{$data.bookid}</p>
+	<p>教材名称：《{$data.bookname}》</p>
+	<p>教材简述：{$data.description}</p>
+	<p>教材价格：{$data.price}</p>
+	<p><input type="button" value="添加至购物车" onClick="javascript:window.location='__APP__/cart/add/id/{$data.bookid}';" /></p>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

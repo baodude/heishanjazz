@@ -1,0 +1,25 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookfooter {
+	margin:20px;
+	padding:10px;
+	color:#808080;
+	border-style:none;
+}
+</style>
+<div id="details"><br />
+  <div class="bookfooter">
+	<div>{$hi}</div><br />
+	您的编号：{$userdata.userid}<br />
+	您的姓名：{$userdata.username}<br />
+	<form action="__APP__/member/modify" method="post">
+	<label for="phone">您的电话：</label><input type="text" name="phone" id="phone" value="{$userdata.phone}" /><br />
+	<label for="email">电子邮箱：</label><input type="text" name="email" id="email" value="{$userdata.email}" /><br />
+	<label for="address">收货地址：</label><input type="text" name="address" id="address" value="{$userdata.address}" /><br />
+	<input type="submit" value="修改" />
+	</form>
+
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

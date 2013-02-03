@@ -1,0 +1,54 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+</style>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+<script type="text/javascript">
+	KE.show({
+	id : 'descriptionctrl'
+});
+function checkpost()
+{
+	var form=document.forms[0];
+	if(form.id.value.length<=0)
+		alert("编号不能为空");
+	else if(form.title.value.length<=0)
+		alert("标题不能为空");
+	else if(form.urlsina.value.length<=0)
+		alert("新浪地址不能为空");
+	else if(form.urlyouku.value.length<=0)
+		alert("优酷地址不能为空");
+	else if(form.url56.value.length<=0)
+		alert("56地址不能为空");
+	else if(form.urltudou.value.length<=0)
+		alert("土豆地址不能为空");
+	else
+		form.submit();
+}
+</script>
+<div id="details"><br />
+  <div class="bookheader">
+  <form method="post" action="__APP__/m/addvideo" id="form">
+	编号：<input type="id" name="id" size="100" /><br />
+	标题：<input type="text" name="title" size="100" /><br />
+	新浪：<input type="text" name="urlsina" size="100" onmouseover="this.select();" value="__APP__/public/none.swf" /><br />
+	优酷：<input type="text" name="urlyouku" size="100" onmouseover="this.select();" value="__APP__/public/none.swf" /><br />
+	56网：<input type="text" name="url56" size="100" onmouseover="this.select();" value="__APP__/public/none.swf" /><br />
+	土豆：<input type="text" name="urltudou" size="100" onmouseover="this.select();" value="__APP__/public/none.swf" /><br />
+	描述：<textarea name="description" id="descriptionctrl" style="width:700px;height:300px;visibility:hidden;"></textarea><br />
+	请确保输入内容的正确性，视频编号必须为纯数字否则上传结果编号为0，视频如果未上传地址请填写“__APP__/public/none.swf”。<br />
+	<input type="submit" value="添加" />
+  </form>
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />

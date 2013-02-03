@@ -1,0 +1,87 @@
+<include file="./Tpl/default/Public/header.html" />
+<style type="text/css">
+.header {
+	margin-top:12px;
+	margin-right:10px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+	float:left;
+	height:400px;
+	width:250px;
+	word-break:break-all;
+	white-space:normal;
+	overflow:auto;
+	word-wrap:break-word;
+}
+.footer {
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+</style>
+<script type="text/javascript">
+function TurnToSina()
+{
+	$("#video").wrapInner('<div><object id="ssss" width="560" height="420" ><param name="allowScriptAccess" value="always" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="<php>echo $data["urlsina"];</php>" type="application/x-shockwave-flash" name="ssss" allowFullScreen="true" allowScriptAccess="always" width="560" height="420"></embed></object></div>');
+}
+function TurnToYouku()
+{
+
+	$("#video").wrapInner('<embed src="<php>echo $data["urlyouku"];</php>" quality="high" width="560" height="420" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>');
+}
+function TurnTo56()
+{
+
+	$("#video").wrapInner('<embed src="<php>echo $data["url56"];</php>"  type="application/x-shockwave-flash" width="560" height="420"></embed>');
+}
+function TurnToTudou()
+{
+	$("#video").wrapInner('<object width="560" height="420"><param name="movie" value="<php>echo $data["urltudou"];</php>"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param><embed src="<php>echo $data["urltudou"];</php>" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="560" height="420"></embed></object>');
+}
+</script>
+	<div id="details">
+
+	<div id="box-1">
+		<h1 class="heading">视频讨论</h1>
+		<div class="header">
+		请踊跃发言
+			<iterate name="comment" id="vo">
+			<p><strong><php>
+		if (strlen($vo['userid'])>=7)
+			{
+				$ip=explode('.',$vo['userid']);
+				echo $ip[0].".".$ip[1]."."."*.*";
+			}
+		else
+			echo $vo['userid'];</php></strong>于{$vo.time}说：<br /><font color="green">{$vo.comment}</font></p>
+			</iterate>
+		<form method="post" action="__APP__/video/comment">
+		<strong>{$Think.session.userid}</strong><input type="text" id="comment" name="comment" size="25" /><input type="hidden" name="videoid" value="{$data['videoid']}" /> <input type="submit" value="贴出" />
+		</form>
+		</div>
+	</div>
+
+      <div id="box-4">
+       <h1 class="heading">{$data['videoid']}.{$data['title']}</h1>
+       <div id="video"><object width="560" height="420"><param name="movie" value="<php>echo $data["urltudou"];</php>"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param><embed src="<php>echo $data["urltudou"];</php>" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="560" height="420"></embed></object></div>
+		<div>播放缓慢可以切换至其他线路 <a href="javascript:TurnToTudou();">土豆</a> <a href="javascript:TurnToSina();">新浪</a> <a href="javascript:TurnToYouku();">优酷</a> <a href="javascript:TurnTo56();">56</a> | <a href="__APP__/video/star/{$data['videoid']}" target="_blank">收藏本视频</a> | 点击数:{$data['count']} | {$data['time']}
+      </div>
+	  </div>
+
+
+      <div class="clearboth"></div>
+    </div>
+	<div class="footer">
+
+	<p>{$data['description']}</p>
+	</div>
+<include file="./Tpl/default/Public/footer.html" />

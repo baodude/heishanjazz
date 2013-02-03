@@ -1,0 +1,277 @@
+<include file="./Tpl/default/Public/header.html" />
+<link type="text/css" href="__PUBLIC__/tabs/css/smoothness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="__PUBLIC__/tabs/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#tabs').tabs();
+	});
+</script>
+<style type="text/css">
+.bookheader {
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:10px;
+	padding:10px;
+	color:#808080;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+}
+.book {
+	margin:5px;
+}
+.bookone a {
+	margin:20px;
+	padding:15px;
+	border-style:solid;
+	border-width:1pt;
+	border-color:#808080;
+	display:block;
+	width:800px;
+	height:100px;
+	text-decoration: none;
+}
+.bookone a:hover {
+	background:#eee;
+	border-right:5px solid #aaa;
+	text-decoration: none;
+}
+.booktwo {
+	margin:20px;
+	padding:10px;
+	border-style:none;
+	display:block;
+	width:800px;
+	height:100px;
+}
+.booktable {
+	margin:20px;
+	padding:10px;
+	width:375px;
+	height:200px;
+	text-align:center;
+	border: 1px solid #333;
+}
+th {
+	text-align:center;
+	background-color: #eee;
+	border: 1px solid #eee
+}
+td {
+	border: 1px solid #eee
+}
+.bookthreebig {
+	margin:20px;
+	padding:10px;
+	width:800px;
+	height:50px;
+	border: 1px solid #333;
+}
+.bookthreesmall {
+	margin:20px;
+	padding:10px;
+	width:375px;
+	height:75px;
+	border: 1px solid #333;
+}
+.bookfooter {
+	margin:20px;
+	padding:10px;
+	color:#808080;
+	border-style:none;
+}
+</style>
+<div id="details"><br />
+  <div class="bookheader"> <img src="__PUBLIC__/images/1.jpg" alt="黑山教材" /> </div>
+  <div class="book">
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">入会教材</a></li>
+        <li><a href="#tabs-2">一期教材</a></li>
+        <li><a href="#tabs-3">二期教材</a></li>
+        <li><a href="#tabs-4">三期教材</a></li>
+      </ul>
+      <div id="tabs-1">
+        <ul>
+          <li class="bookone"><a target="_blank" href="__APP__/index.php/book/101">黑山“爵士四书”</a></li>
+          <li class="bookone"><a target="_blank" href="__APP__/index.php/book/102">黑山“爵士精华”</a></li>
+        </ul>
+      </div>
+      <div id="tabs-2">
+        <div class="booktwo">
+          <table>
+            <tbody>
+              <tr>
+                <td><table class="booktable">
+                    <thead>
+                      <tr>
+                        <th>基本(爵士四书)</th>
+                        <th>精华</th>
+                        <th>和声</th>
+                        <th>旋律</th>
+                        <th>节奏</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/1">基本乐理</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/5">爵士精华</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/9">增减和弦</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/13">旋律写作</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/17">节奏分析</a></td>
+                      </tr>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/2">和弦运用</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/6">爵士节奏</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/10">小调和弦</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/14">旋律设计</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/18">节奏分类</a></td>
+                      </tr>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/3">节奏练习</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/7">爵士旋律</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/11">功能和弦</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/15">旋律性质</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/19">节奏观念</a></td>
+                      </tr>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/4">旋律分析</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/8">爵士和声</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/12">调式和弦</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/16">旋律谱曲</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/20">三音之歌</a></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+                <td><table class="booktable">
+                    <thead>
+                      <tr>
+                        <th>钢琴</th>
+                        <th>即兴</th>
+                        <th>综合</th>
+                        <th>编曲(节奏组)</th>
+                        <th>编曲(管乐组)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/21">右手变化</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/25">即兴练习</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/29">一节爵士</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/33">编曲基础</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/37">二部编曲</a></td>
+                      </tr>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/22">右手练习</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/26">即兴原则</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/30">音乐百科</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/34">编曲入门</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/38">三部编曲</a></td>
+                      </tr>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/23">左手变化</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/27">即兴例句</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/31">变奏百科</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/35">节奏乐组</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/39">四部编曲</a></td>
+                      </tr>
+                      <tr>
+                        <td><a target="_blank" href="__APP__/index.php/book/24">左手练习</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/28">即兴观念</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/32">三音之乐</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/36">流行乐组</a></td>
+                        <td><a target="_blank" href="__APP__/index.php/book/40">小型乐队</a></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="tabs-3">欢迎学习
+        <table>
+          <tbody>
+            <tr>
+              <td><div class="bookthreesmall">
+                  <h6>乐理</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/41">唯一教学（光盘）</a></div></td>
+              <td><div class="bookthreesmall">
+                  <h6>节奏</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/42">挑战节奏</a> <a target="_blank" href="__APP__/index.php/book/43">节奏三练（读、写、听）</a></div></td>
+            </tr>
+            <tr>
+              <td><div class="bookthreesmall">
+                  <h6>旋律</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/44">旋律曲式</a> <a target="_blank" href="__APP__/index.php/book/45">调式写作</a> <a target="_blank" href="__APP__/index.php/book/46">装饰音符</a></div></td>
+              <td><div class="bookthreesmall">
+                  <h6>综合</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/47">挑战音乐</a> <a target="_blank" href="__APP__/index.php/book/48">乐理千题</a> <a target="_blank" href="__APP__/index.php/book/49">爵士音乐</a> <a target="_blank" href="__APP__/index.php/book/50">泛音百科</a></div></td>
+            </tr>
+            <tr>
+              <td><div class="bookthreesmall">
+                  <h6>和声</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/51">流行和声</a> <a target="_blank" href="__APP__/index.php/book/52">爵士和声</a> <a target="_blank" href="__APP__/index.php/book/53">和弦复习</a> <a target="_blank" href="__APP__/index.php/book/54">重配和声</a> <a target="_blank" href="__APP__/index.php/book/55">和弦进行</a> <a target="_blank" href="__APP__/index.php/book/56">五声和声</a></div></td>
+              <td><div class="bookthreesmall">
+                  <h6>即兴</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/57">即兴范例</a> <a target="_blank" href="__APP__/index.php/book/58">五声音乐</a> <a target="_blank" href="__APP__/index.php/book/59">四度句型</a> <a target="_blank" href="__APP__/index.php/book/60">音程句型</a> <a target="_blank" href="__APP__/index.php/book/61">挂4句型</a> <a target="_blank" href="__APP__/index.php/book/62">句型创作</a></div></td>
+            </tr>
+            <tr>
+              <td><div class="bookthreesmall">
+                  <h6>钢琴</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/63">伴奏变化</a> <a target="_blank" href="__APP__/index.php/book/64">伴奏练习</a> <a target="_blank" href="__APP__/index.php/book/65">填音变化</a> <a target="_blank" href="__APP__/index.php/book/66">减七变化</a> <a target="_blank" href="__APP__/index.php/book/67">声位变化</a> <a target="_blank" href="__APP__/index.php/book/68">钢琴例句</a></div></td>
+              <td><div class="bookthreesmall">
+                  <h6>编曲</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/69">R.S编曲</a> <a target="_blank" href="__APP__/index.php/book/70">现代对位</a> <a target="_blank" href="__APP__/index.php/book/71">对位技巧</a> <a target="_blank" href="__APP__/index.php/book/72">黑山歌曲</a> <a target="_blank" href="__APP__/index.php/book/73">乐器编配</a> <a target="_blank" href="__APP__/index.php/book/74">四部曲例</a> <a target="_blank" href="__APP__/index.php/book/75">管弦乐团</a> <a target="_blank" href="__APP__/index.php/book/76">编曲研究</a></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="tabs-4">第三期教材尚未开放
+        <div class="bookthreebig">
+          <h6>旋律</h6>
+          <br />
+          <a target="_blank" href="__APP__/index.php/book/77">即兴作曲</a> <a target="_blank" href="__APP__/index.php/book/78">现代作曲</a> <a target="_blank" href="__APP__/index.php/book/79">十二音列</a> <a target="_blank" href="__APP__/index.php/book/80">做歌基础</a> <a target="_blank" href="__APP__/index.php/book/81">顺阶材料</a> <a target="_blank" href="__APP__/index.php/book/82">变音材料</a> <a target="_blank" href="__APP__/index.php/book/83">旋律结构</a> <a target="_blank" href="__APP__/index.php/book/84">特定材料</a></div>
+        <table>
+          <tbody>
+            <tr>
+              <td><div class="bookthreesmall">
+                  <h6>即兴</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/85">和弦音阶</a> <a target="_blank" href="__APP__/index.php/book/86">即兴技巧</a> <a target="_blank" href="__APP__/index.php/book/87">常用音阶</a> <a target="_blank" href="__APP__/index.php/book/88">特定音阶</a> <a target="_blank" href="__APP__/index.php/book/89">音阶分析</a> <a target="_blank" href="__APP__/index.php/book/90">音阶练习</a> <a target="_blank" href="__APP__/index.php/book/91">减七句型</a></div></td>
+              <td><div class="bookthreesmall">
+                  <h6>和声</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/92">代V和声</a> <a target="_blank" href="__APP__/index.php/book/93">和弦终止</a> <a target="_blank" href="__APP__/index.php/book/94">和弦连接</a></div></td>
+            </tr>
+            <tr>
+              <td><div class="bookthreesmall">
+                  <h6>钢琴</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/95">钢琴练习</a> <a target="_blank" href="__APP__/index.php/book/96">爵士奏法</a> <a target="_blank" href="__APP__/index.php/book/97">钢琴即兴</a></div></td>
+              <td><div class="bookthreesmall">
+                  <h6>编曲</h6>
+                  <br />
+                  <a target="_blank" href="__APP__/index.php/book/98">五部编曲</a> <a target="_blank" href="__APP__/index.php/book/99">中型乐队</a> <a target="_blank" href="__APP__/index.php/book/100">大型乐队</a></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="bookfooter">
+	<p>点击书名可以查看教材的详细信息</p><br />
+	<p>购买任一入会教材即成为黑山交流会员，您收到的教材内附编号及密码，可凭此编号和密码来购买一期教材</p><br />
+	<p>根据学习情况为您开放二期、三期教材</p><br />
+  </div>
+  <div class="clearboth"></div>
+</div>
+<include file="./Tpl/default/Public/footer.html" />
