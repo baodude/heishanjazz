@@ -1,0 +1,31 @@
+.logotext {
+	font-weight: bold;
+	color: #005828;
+}
+body {
+	font-size: 10pt;
+	font-family: Verdana, Arial, "宋体";
+	position: relative;
+	left: 32px;
+}
+.bottomtext {
+	font-weight: bold;
+	color: #005828;
+	text-align: center;
+}
+table {
+	margin: 20px;
+	padding: 6px;
+}
+td {
+	border-right-style: dashed;
+}
+
+a {
+	color: #ff5126;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.headtext {
+	font-weight: bold;
+}
